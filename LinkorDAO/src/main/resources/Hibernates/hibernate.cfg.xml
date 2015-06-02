@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">vinay1</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/linkor</property>
+        <property name="hibernate.connection.username">vinay1</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        
+        <mapping class="com.linkor.DAO.Model.UserDetails" />
+        <mapping class="com.linkor.DAO.Model.AddRequestUser" />
+        <mapping class="com.linkor.DAO.Model.Address" />
+        <mapping class="com.linkor.DAO.Model.AdminDetails" />
+        <mapping class="com.linkor.DAO.Model.AlbumPic" />
+        <mapping class="com.linkor.DAO.Model.Comment" />
+        <mapping class="com.linkor.DAO.Model.Education" />
+        <mapping class="com.linkor.DAO.Model.Events" />
+        <mapping class="com.linkor.DAO.Model.Friends" />
+        <mapping class="com.linkor.DAO.Model.Group" />
+        <mapping class="com.linkor.DAO.Model.GroupMembers" />
+        <mapping class="com.linkor.DAO.Model.Login" />
+        <mapping class="com.linkor.DAO.Model.PicStorage" />
+        <mapping class="com.linkor.DAO.Model.Post" />
+        <mapping class="com.linkor.DAO.Model.ProfilePic" />
+        <mapping class="com.linkor.DAO.Model.ResumeTemplete" />
+        <mapping class="com.linkor.DAO.Model.Skills" />
+        <mapping class="com.linkor.DAO.Model.Working" />
+     </session-factory>
+</hibernate-configuration>
