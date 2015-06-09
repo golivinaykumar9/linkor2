@@ -29,9 +29,7 @@ public class Group implements Serializable {
 	private Date groupCreatedOn;
 	@OneToMany	
 	private List<GroupMembers> groupMembers;
-	@ManyToOne
-	private Skills skills;
-	@OneToMany(mappedBy="group")
+	@OneToMany
 	private List<Post> post;
 	
 	
@@ -49,12 +47,6 @@ public class Group implements Serializable {
 	}
 	public void setPost(List<Post> post) {
 		this.post = post;
-	}
-	public Skills getSkills() {
-		return skills;
-	}
-	public void setSkills(Skills skills) {
-		this.skills = skills;
 	}
 	public long getGroupUUID() {
 		return groupUUID;
