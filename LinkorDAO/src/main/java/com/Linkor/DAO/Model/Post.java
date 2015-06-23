@@ -20,9 +20,6 @@ public class Post implements Serializable {
 	private static final long serialVersionUID = 7799434878220051322L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long userPostUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long userPostId;
 	private String userPostDesc;
 	private Date userPostedOn;
@@ -46,12 +43,6 @@ public class Post implements Serializable {
 	}
 	public void setSecrect(boolean secrect) {
 		this.secrect = secrect;
-	}
-	public long getUserPostUUID() {
-		return userPostUUID;
-	}
-	public void setUserPostUUID(long userPostUUID) {
-		this.userPostUUID = userPostUUID;
 	}
 	public long getUserPostId() {
 		return userPostId;

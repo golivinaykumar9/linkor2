@@ -16,9 +16,6 @@ public class Working implements Serializable{
 	private static final long serialVersionUID = 5809974270537780255L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long workingUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long workingId;
 	private String workingCompany;
 	private String workingPosition;
@@ -29,13 +26,7 @@ public class Working implements Serializable{
 	private boolean timePeriod;
 	@ManyToOne
 	private UserDetails user;
-	public long getWorkingUUID() {
-		return workingUUID;
-	}
-	public void setWorkingUUID(long workingUUID) {
-		this.workingUUID = workingUUID;
-	}
-	public long getWorkingId() {
+		public long getWorkingId() {
 		return workingId;
 	}
 	public void setWorkingId(long workingId) {

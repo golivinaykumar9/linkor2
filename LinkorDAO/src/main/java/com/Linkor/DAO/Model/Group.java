@@ -20,9 +20,6 @@ public class Group implements Serializable {
 	private static final long serialVersionUID = 9139423105472403372L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long groupUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long groupId;
 	private String groupName;
 	private String groupDesc;
@@ -31,12 +28,7 @@ public class Group implements Serializable {
 	private List<GroupMembers> groupMembers;
 	@OneToMany
 	private List<Post> post;
-	
-	
-	
-	
-	
-	public List<GroupMembers> getGroupMembers() {
+		public List<GroupMembers> getGroupMembers() {
 		return groupMembers;
 	}
 	public void setGroupMembers(List<GroupMembers> groupMembers) {
@@ -47,12 +39,6 @@ public class Group implements Serializable {
 	}
 	public void setPost(List<Post> post) {
 		this.post = post;
-	}
-	public long getGroupUUID() {
-		return groupUUID;
-	}
-	public void setGroupUUID(long groupUUID) {
-		this.groupUUID = groupUUID;
 	}
 	public long getGroupId() {
 		return groupId;

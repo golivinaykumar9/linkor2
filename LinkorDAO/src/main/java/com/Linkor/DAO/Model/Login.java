@@ -16,20 +16,11 @@ public class Login implements Serializable{
 	private static final long serialVersionUID = 463665942900777507L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long loginUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long loginId;
 	private String userName;
 	private String password;
 	private long attempt;
 	private String Status;
-	public long getLoginUUID() {
-		return loginUUID;
-	}
-	public void setLoginUUID(long loginUUID) {
-		this.loginUUID = loginUUID;
-	}
 	public long getLoginId() {
 		return loginId;
 	}

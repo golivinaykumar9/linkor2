@@ -16,18 +16,9 @@ public class Skills implements Serializable{
 	private static final long serialVersionUID = 3485118014647244915L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long skillUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long skillID;
 	private String skillName;
 	private String skillDesc;
-	public long getSkillUUID() {
-		return skillUUID;
-	}
-	public void setSkillUUID(long skillUUID) {
-		this.skillUUID = skillUUID;
-	}
 	public long getSkillID() {
 		return skillID;
 	}

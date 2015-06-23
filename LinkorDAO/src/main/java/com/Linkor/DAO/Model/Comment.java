@@ -15,10 +15,7 @@ public class Comment implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 2235065202395773163L;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long userPostCommentUUID;
-	@Id
+		@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long userPostCommentId;
 	private String userPostCommentDesc;
@@ -27,12 +24,6 @@ public class Comment implements Serializable{
 	private UserDetails user;
 	@ManyToOne
 	private Post userPost;
-	public long getUserPostCommentUUID() {
-		return userPostCommentUUID;
-	}
-	public void setUserPostCommentUUID(long userPostCommentUUID) {
-		this.userPostCommentUUID = userPostCommentUUID;
-	}
 	public long getUserPostCommentId() {
 		return userPostCommentId;
 	}

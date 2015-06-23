@@ -16,17 +16,8 @@ public class PicStorage implements Serializable{
 	private static final long serialVersionUID = 5081419333407700331L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long picStorageUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long picStorageId;
 	private String picStorageUrl;
-	public long getPicStorageUUID() {
-		return picStorageUUID;
-	}
-	public void setPicStorageUUID(long picStorageUUID) {
-		this.picStorageUUID = picStorageUUID;
-	}
 	public long getPicStorageId() {
 		return picStorageId;
 	}

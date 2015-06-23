@@ -16,18 +16,9 @@ public class ResumeTemplete implements Serializable{
 	private static final long serialVersionUID = -3042359010907465079L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long resumeUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long resumeId;
 	private String resumeStyle;
 	private UserDetails user;
-	public long getResumeUUID() {
-		return resumeUUID;
-	}
-	public void setResumeUUID(long resumeUUID) {
-		this.resumeUUID = resumeUUID;
-	}
 	public long getResumeId() {
 		return resumeId;
 	}

@@ -17,20 +17,11 @@ public class ProfilePic  implements Serializable{
 	private static final long serialVersionUID = -6930541288088531716L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long ProfilePicUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ProfilePicId;
 	private String ProfilePicURL;
 	@ManyToOne
 	private UserDetails user;
-	public long getProfilePicUUID() {
-		return ProfilePicUUID;
-	}
-	public void setProfilePicUUID(long profilePicUUID) {
-		ProfilePicUUID = profilePicUUID;
-	}
-	public long getProfilePicId() {
+		public long getProfilePicId() {
 		return ProfilePicId;
 	}
 	public void setProfilePicId(long profilePicId) {

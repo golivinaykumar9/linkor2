@@ -18,9 +18,6 @@ public class AddRequestUser implements Serializable{
 	private static final long serialVersionUID = 8497782638568973259L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long addRequestUserUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long addRequestUserId;
 	@ManyToOne
 	private UserDetails user;
@@ -36,12 +33,6 @@ public class AddRequestUser implements Serializable{
 	}
 	public void setUser(UserDetails user) {
 		this.user = user;
-	}
-	public long getAddRequestUserUUID() {
-		return addRequestUserUUID;
-	}
-	public void setAddRequestUserUUID(long addRequestUserUUID) {
-		this.addRequestUserUUID = addRequestUserUUID;
 	}
 	public long getAddRequestUserId() {
 		return addRequestUserId;

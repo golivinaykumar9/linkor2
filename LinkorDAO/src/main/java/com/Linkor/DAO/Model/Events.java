@@ -17,20 +17,11 @@ public class Events implements Serializable{
 	private static final long serialVersionUID = 3010905146384545436L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long eventUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long eventId;
 	private Date eventOn;
 	private String eventDesc;
 	
-	public long getEventUUID() {
-		return eventUUID;
-	}
-	public void setEventUUID(long eventUUID) {
-		this.eventUUID = eventUUID;
-	}
-	public long getEventId() {
+		public long getEventId() {
 		return eventId;
 	}
 	public void setEventId(long eventId) {

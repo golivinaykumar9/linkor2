@@ -17,9 +17,6 @@ public class Address implements Serializable{
 	private static final long serialVersionUID = -1769259447425775299L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long addressUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long addressId;
 	private String address1;
 	private String address2;
@@ -28,13 +25,7 @@ public class Address implements Serializable{
 	private int addressZipCode;
 	@ManyToOne
 	private UserDetails user;
-	public long getAddressUUID() {
-		return addressUUID;
-	}
-	public void setAddressUUID(long addressUUID) {
-		this.addressUUID = addressUUID;
-	}
-	public long getAddressId() {
+		public long getAddressId() {
 		return addressId;
 	}
 	public void setAddressId(long addressId) {

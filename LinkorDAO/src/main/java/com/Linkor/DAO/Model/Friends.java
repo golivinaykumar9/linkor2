@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+
 @Entity
 public class Friends implements Serializable {
 	
@@ -19,22 +22,24 @@ public class Friends implements Serializable {
 	private static final long serialVersionUID = -5495610428203619587L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long friendUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long friendId;
-	@ManyToOne
-
+	@ManyToOne 
+	@JoinColumn(name="user_id")
 	private UserDetails user;
 	@OneToMany
-	private List<UserDetails> addFriends;
+	private List<UserDetails> friends;
+	
+	
+	public List<UserDetails> getFriends() {
+		return friends;
+	}
+	public void setFriends(List<UserDetails> friends) {
+		this.friends = friends;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	private String status;
-	public long getFriendUUID() {
-		return friendUUID;
-	}
-	public void setFriendUUID(long friendUUID) {
-		this.friendUUID = friendUUID;
-	}
 	public long getFriendId() {
 		return friendId;
 	}
@@ -47,12 +52,7 @@ public class Friends implements Serializable {
 	public void setUser(UserDetails user) {
 		this.user = user;
 	}
-	public List<UserDetails> getAddFriends() {
-		return addFriends;
-	}
-	public void setAddFriends(List<UserDetails> addFriends) {
-		this.addFriends = addFriends;
-	}
+
 	public String getStatus() {
 		return status;
 	}

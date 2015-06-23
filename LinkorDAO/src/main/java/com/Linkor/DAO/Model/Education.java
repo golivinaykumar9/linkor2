@@ -17,9 +17,6 @@ public class Education implements Serializable{
 	private static final long serialVersionUID = 5250730770346839896L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long educationUUID;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long educationId;
 	private String educationSchoolName;
 	private String educationZone;
@@ -39,12 +36,6 @@ public class Education implements Serializable{
 	}
 	public void setUser(UserDetails user) {
 		this.user = user;
-	}
-	public long getEducationUUID() {
-		return educationUUID;
-	}
-	public void setEducationUUID(long educationUUID) {
-		this.educationUUID = educationUUID;
 	}
 	public long getEducationId() {
 		return educationId;
